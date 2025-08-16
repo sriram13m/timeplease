@@ -1,7 +1,6 @@
 pub mod cli;
 
 use cli::{Args, Commands};
-use std::{fs};
 use std::sync::OnceLock;
 use std::collections::HashMap;
 use chrono::{DateTime, Utc, NaiveTime, TimeZone};
@@ -30,7 +29,7 @@ fn convert_time(time_str: &str, from_tz: Tz, to_tz: Tz) -> Result<DateTime<Tz>, 
 
 fn load_timezone_mapping() -> Result<&'static HashMap<String, String>, Box<dyn std::error::Error>> {
   let map = TIMEZONE_MAP.get_or_init(|| {
-      let timezone_data = fs::read_to_string("src/timezones.json").expect("Failed to read timezone file");
+      let timezone_data = include_str!("timezones.json");
       let timezone_mapping: HashMap<String, String> = serde_json::from_str(&timezone_data).expect("Failed to parse timezone JSON");
       timezone_mapping
   });

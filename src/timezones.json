@@ -36,6 +36,9 @@
   "washington": "America/New_York",
   "washingtondc": "America/New_York",
   "dc": "America/New_York",
+  "fostercity": "America/Los_Angeles",
+  "sfo": "America/Los_Angeles",
+  "bellevue": "America/Los_Angeles",
   "usa": "America/New_York",
 
   "tokyo": "Asia/Tokyo",
@@ -140,6 +143,9 @@
   "dublin": "Europe/Dublin",
   "cork": "Europe/Dublin",
   "limerick": "Europe/Dublin",
+  "northernireland": "Europe/London",
+  "ni": "Europe/London",
+  "belfast": "Europe/London",
   "ireland": "Europe/Dublin",
 
   "lisbon": "Europe/Lisbon",
